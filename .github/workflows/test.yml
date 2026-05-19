@@ -16,12 +16,10 @@ jobs:
       - name: Make
         run: .\Make.bat
       - name: Upload Artifact
-        uses: actions/upload-artifact@v8
+        uses: actions/upload-artifact@v4
         with:
           name: results
           path: x64/Release/
-          retention-days: 1
-          overwrite: true
   release:
     name: Release
     needs: build
@@ -32,7 +30,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Download Artifact
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: results
           path: .
