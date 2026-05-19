@@ -1,7 +1,8 @@
-name: Test
-run-name: Test ${{ github.ref_name }}
+name: Release
+run-name: Release ${{ github.ref_name }}
 on:
-  workflow_dispatch:
+  push:
+    tags: [ "release-*" ]
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:
