@@ -1,0 +1,9 @@
+# Git Ignore
+.vs
+.vscode
+build
+debug
+release
+*.aps
+*.gresource.c
+*.user

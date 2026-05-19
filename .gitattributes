@@ -1,0 +1,20 @@
+# Git Attributes
+* text=auto
+*.bmp           binary
+*.c             text
+*.css           text
+*.filters       text
+*.h             text
+*.hint          text
+*.html          text
+*.ico           binary
+*.manifest      text
+*.md            text
+*.png           text
+*.po            text
+*.rc            text working-tree-encoding=utf-16le-bom
+*.slnx          text
+*.ui            text diff=xml
+*.vcxproj       text
+*.xml           text
+*.yml           text
