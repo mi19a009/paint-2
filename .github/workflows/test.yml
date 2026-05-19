@@ -1,0 +1,35 @@
+name: Test
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    name: Build
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+      - name: Make
+        run: CALL Make.bat
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          path: x64/Release/Viewer32.exe
+  release:
+    name: Release
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Download Artifact
+        uses: actions/download-artifact@v1
+        with:
+          path: x64/Release/
+      - name: Create
+        run: gh release create "$GITHUB_REF_NAME" x64/Release/Viewer32.exe
+        env:
+          GH_TOKEN: ${{ github.token }}

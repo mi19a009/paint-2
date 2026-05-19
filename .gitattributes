@@ -17,3 +17,4 @@
 *.ui            text diff=xml
 *.vcxproj       text
 *.xml           text
+*.yml           text
