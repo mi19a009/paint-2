@@ -4,5 +4,5 @@
 @interface ImageView : NSView
 @property NSImage *image;
 @property NSInteger imageIndex;
-@property int zoom;
+@property CGFloat zoom;
 @end

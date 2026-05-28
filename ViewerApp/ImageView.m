@@ -1,8 +1,7 @@
 // Copyright (C) 2026 Taichi Murakami.
 #import "ImageView.h"
-#define ZOOM_DEFAULT_VALUE      100
-#define ZOOM_MAXIMUM            1000
-#define ZOOM_MINIMUM            1
+#define ZOOM_MAXIMUM            10.00
+#define ZOOM_MINIMUM            0.01
 #define ZOOM_CLAMP(zoom)        MIN(MAX((zoom), ZOOM_MINIMUM), ZOOM_MAXIMUM)
 
 @interface ImageView () {
@@ -10,7 +9,7 @@
 	NSImage   *_image;
 	NSInteger  _imageIndex;
 	CGImageRef _imageRef;
-	int        _zoom;
+	CGFloat    _zoom;
 }
 
 @end
@@ -55,7 +54,7 @@
 
 // プロパティに既定値を設定します。
 - (void)initialize {
-	_zoom = ZOOM_DEFAULT_VALUE;
+	_zoom = 1.0;
 }
 
 // NSImage を設定します。
@@ -75,7 +74,7 @@
 }
 
 // 拡大率を設定します。
-- (void) setZoom:(int)zoom {
+- (void)setZoom:(CGFloat)zoom {
 	_zoom = ZOOM_CLAMP(zoom);
 	[self updateFrameSize];
 }
@@ -83,9 +82,8 @@
 // 現在のビューの大きさを決定します。
 - (void)updateFrameSize {
 	if (_imageRef) {
-		const CGFloat scale = [self zoomScale];
-		_frameSize.width = CGImageGetWidth(_imageRef) * scale;
-		_frameSize.height = CGImageGetHeight(_imageRef) * scale;
+		_frameSize.width = CGImageGetWidth(_imageRef) * _zoom;
+		_frameSize.height = CGImageGetHeight(_imageRef) * _zoom;
 	} else {
 		_frameSize.width = 0;
 		_frameSize.height = 0;
@@ -110,13 +108,7 @@
 }
 
 // 拡大率を取得します。
-- (int)zoom {
+- (CGFloat)zoom {
 	return _zoom;
 }
-
-// 拡大率を取得します。
-- (CGFloat)zoomScale {
-	return _zoom / (CGFloat)ZOOM_DEFAULT_VALUE;
-}
-
 @end
