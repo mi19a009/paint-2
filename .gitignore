@@ -4,6 +4,7 @@
 build
 debug
 release
+xcuserdata
 *.aps
 *.gresource.c
 *.user
