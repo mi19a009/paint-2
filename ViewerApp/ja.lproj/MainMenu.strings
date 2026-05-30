@@ -1,0 +1,85 @@
+/* Copyright (C) 2026 Taichi Murakami. */
+
+/* [Application] [About Picture Viewer] */
+"5kV-Vb-QxS.title" = "ピクチャ ビューアーについて";
+
+/* [Application] [Preferences…] */
+"BOF-NM-1cW.title" = "設定…";
+
+/* [Application] [Services] */
+"NMo-om-nkz.title" = "サービス";
+
+/* [Application] [Hide Picture Viewer] */
+"Olw-nP-bQN.title" = "ピクチャ ビューアーを非表示";
+
+/* [Application] [Hide Others] */
+"Vdr-fp-XzO.title" = "ほかを非表示";
+
+/* [Application] [Show All] */
+"Kd2-mp-pUS.title" = "すべてを表示";
+
+/* [Application] [Quit Picture Viewer] */
+"4sb-4s-VLi.title" = "ピクチャ ビューアーを終了";
+
+/* [File] */
+"bib-Uj-vzu.title" = "ファイル";
+
+/* [File] [Open…] */
+"IAo-SY-fd9.title" = "開く…";
+
+/* [File] [Open Recent] */
+"tXI-mr-wws.title" = "最近使った項目を開く";
+
+/* [File] [Close] */
+"DVo-aG-piG.title" = "閉じる";
+
+/* [File] [Page Setup…] */
+"qIS-W8-SiK.title" = "ページ設定…";
+
+/* [File] [Print…] */
+"aTl-1u-JFS.title" = "印刷…";
+
+/* [Format] */
+"GEO-Iw-cKr.title" = "フォーマット";
+
+/* [Format] [Show Colors] */
+"bgn-CT-cEk.title" = "カラーパネルを表示";
+
+/* [View] */
+"HyV-fh-RgO.title" = "表示";
+
+/* [View] [Show Toolbar] */
+"snW-S8-Cw5.title" = "ツールバーを表示";
+
+/* [View] [Customize Toolbar…] */
+"1UK-8n-QPP.title" = "ツールバーをカスタマイズ…";
+
+/* [View] [Actual Size] */
+"QEv-Tz-yAe.title" = "実際のサイズ";
+
+/* [View] [Zoom In] */
+"XBW-Cd-big.title" = "拡大";
+
+/* [View] [Zoom Out] */
+"WEN-BL-YZS.title" = "縮小";
+
+/* [View] [Enter Full Screen] */
+"4J7-dP-txa.title" = "フルスクリーンにする";
+
+/* [Window] */
+"Td7-aD-5lo.title" = "ウィンドウ";
+
+/* [Window] [Minimize] */
+"OY7-WF-poV.title" = "しまう";
+
+/* [Window] [Zoom] */
+"R4o-n2-Eq4.title" = "拡大/縮小";
+
+/* [Window] [Bring All to Front] */
+"LE2-aR-0XJ.title" = "すべてを手前に移動";
+
+/* [Help] */
+"F2S-fz-NVQ.title" = "ヘルプ";
+
+/* [Help] [Picture Viewer Help] */
+"FKE-Sm-Kum.title" = "ピクチャ ビューアー ヘルプ";
